@@ -83,7 +83,7 @@ body {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	width: 60%;
+	font-size: medium;
 }
 #about-me p {
 	width: 80%;
@@ -96,6 +96,7 @@ body {
 .title{
 	text-align: center;
 	padding-block: 2em;
+	padding-bottom: inherit;
 }
 .gallery .nav {
 	justify-content: center;
