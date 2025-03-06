@@ -123,10 +123,14 @@ body {
     justify-content: center
 }
 
-.nav-pills .nav-link.active,.nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #beb45a;
-    border-radius: 0
+.nav-link.active-tag{
+	color: #fff;
+    background-color: #beb45a;   /* ICI !!!!!!!!!!!!!!!!!!!!! */
+    border-radius: 0;
+}
+
+.nav-item{
+	cursor: pointer;
 }
 
 .item-column {
