@@ -80,7 +80,7 @@
           a(l).each(function(e) {
               a(t).attr("src") === a(this).attr("src") && (i = e)
           }),
-          s = l[i] || l[l.length - 1],
+          s = l[i - 1] || l[l.length - 1];
           a(".lightboxImage").attr("src", a(s).attr("src"))
       },
       nextImage() {
@@ -100,17 +100,18 @@
           a(l).each(function(e) {
               a(t).attr("src") === a(this).attr("src") && (i = e)
           }),
-          s = l[i] || l[0],
+          s = l[i + 1] || l[0]; // 
           a(".lightboxImage").attr("src", a(s).attr("src"))
       },
+      // aria-hidden="true"
       createLightBox(a, t, e) {
-          a.append(`<div class="modal fade" id="${t || "galleryLightbox"}" tabindex="-1" role="dialog" aria-hidden="true">
+          a.append(`<div class="modal fade" id="${t || "galleryLightbox"}" tabindex="-1" role="dialog">
               <div class="modal-dialog" role="document">
                   <div class="modal-content">
                       <div class="modal-body">
                           ${e ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>' : '<span style="display:none;" />'}
                           <img class="lightboxImage img-fluid" alt="Contenu de l'image affich\xe9e dans la modale au clique"/>
-                          ${e ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>' : '<span style="display:none;" />'}
+                          ${e ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;">></div>' : '<span style="display:none;" />'}
                       </div>
                   </div>
               </div>
